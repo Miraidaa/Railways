@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Rubik+Spray+Paint&display=swap');
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('tiles/empty.png'); 
+    background-size: cover; 
+    background-position: center;  
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    z-index: 1000; 
+}
+
+
+#game-start-image {
+    width: 100%;
+    height: auto;
+    /*max-width: 100vw;*/
+    max-height: 100vh;
+    object-fit: contain; 
+    cursor: pointer;
+}
+
+
+#menu, #game {
+    display: none;
+}
+.menu-screen, .game-screen {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.rules-screen {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.rules-content {
+    background-color: #ffffff;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 10px;
+    text-align: left;
+}
+
+#closeRulesBtn {
+    border-radius: 10px; 
+    font-family: "Itim", cursive; 
+    font-weight: 400; 
+    font-size: 1.5em; 
+    background-color: #d9dec3; 
+    color: #675738; 
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+  
+.menu-screen {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+    color: #675738; 
+}
+  
+h1 {
+    font-size: 8vw;
+    color: #a68e5f;
+    margin-bottom: 20px;
+    font-family: "Rubik Spray Paint", system-ui;
+   font-weight: 200;
+   font-style: normal;
+}
+  
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 2vw;
+    border: 2px solid #d2b48c;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.difficulty-container {
+    margin-bottom: 20px;
+}
+  
+.difficulty-container p {
+    font-size: 2vw;
+    margin-bottom: 10px;
+}
+  
+.difficulty-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 2vw;
+    border: none;
+    background-color: #d9dec3;
+    cursor: pointer;
+    width: 40%;
+    border-radius: 10px;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #675738; 
+}
+  
+#start-btn, #rules-btn {
+    padding: 15px;
+    font-size: 2vw;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color:  #d9dec3;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #675738; 
+}
+
+#backToMenu {
+    border-radius: 10px; 
+    font-family: "Itim", cursive; 
+    font-weight: 400; 
+    font-size: 1.5em; 
+    background-color: #d9dec3; 
+    color: #675738; 
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.grid {
+    display: grid;
+    gap: 2px;
+    margin-top: 20px;
+}
+
+.grid.easy {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid.hard {
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background-color: #ddd;
+    position: relative;
+}
+
+.cell img {
+    width: 100%;
+    height: 100%;
+}
+
+.game-screen {
+    padding: 20px;
+}
+
+.game-grid {
+    display: grid;
+    gap: 5px; 
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.game-grid div {
+    width: 500px; 
+    height: 500px;
+    border: 1px solid #444;
+    background-color: #ddd; 
+    background-size: cover; 
+    cursor: pointer; 
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu.css">
+    <title>Railways Game Menu</title>
+</head>
+<body>
+
+    <div id="splash-screen" style="width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; background-color: #fff;">
+        <img id="game-start-image" src="screens/thumbnail.png" alt="Game Start Image">
+    </div>
+
+    <div class="menu-screen" id="menu">
+        <h1>RAILWAYS</h1>
+        <input type="text" id="player-name" placeholder="WHO ARE YOU?">
+
+        <div class="difficulty-container">
+            <p>SET THE DIFFICULTY!</p>
+            <div>
+                <button id="easy" class="difficulty-btn">5 x 5</button>
+                <button id="hard" class="difficulty-btn">7 x 7</button>
+            </div>
+        </div>
+
+        <button id="rules-btn">RULES</button>
+        <button id="start-btn">START GAME</button>
+    </div>
+
+    <div class="game-screen" id="game" style="display: none;">
+        <h2>Welcome, <span id="player-display"></span>!</h2>
+        <p>Difficulty: <span id="difficulty-display"></span></p>
+        <p>Time: <span id="timer-display">0:00</span></p> 
+
+        <div id="game-grid" class="grid"></div>
+        <button id="backToMenu">Back to Menu</button>
+    </div>
+
+    <div class="rules-screen" id="rules" style="display: none;">
+        <div class="rules-content">
+          <h2>Game Rules</h2>
+          <p>Welcome to *The Kingdom's Railway Network*! Your objective is to connect the towns of Seeknotland by building a complete railway network across a grid. Plan your routes carefully and compete against the clock to finish the network as fast as possible!</p>
+          
+          <h3>How to Play</h3>
+          <ul>
+              <li>Choose a difficulty level to set the size of the map:
+                  <ul>
+                      <li><strong>Easy</strong> – A 5x5 grid</li>
+                      <li><strong>Hard</strong> – A 7x7 grid</li>
+                  </ul>
+              </li>
+              <li>Once the game begins, you’ll see a grid representing different terrain tiles in Seeknotland.</li>
+              <li>Your goal is to place railway tracks to connect all towns within the grid.</li>
+              <li>Each tile can be connected horizontally, vertically, or diagonally based on valid railway placement rules.</li>
+          </ul>
+          
+          <h3>Rules for Railway Placement</h3>
+          <ul>
+              <li>Railways can only be placed on designated tiles. Watch out for blocked or restricted areas!</li>
+              <li>Make sure that your railway connections form a complete path without gaps or dead-ends.</li>
+              <li>The railway network must form a closed loop that connects back to its starting point.</li>
+          </ul>
+          
+          <p>Good luck, and may your trains run smoothly!</p>
+          
+            <button id="closeRulesBtn">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
